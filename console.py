@@ -164,8 +164,8 @@ class HBNBCommand(cmd.Cmd):
                 print(some_args)
 
 
+            # Create model and save to json file
             new_instance = HBNBCommand.classes[args[0]](**some_args)
-
             storage.save()
             print(new_instance.id)
             storage.save()
