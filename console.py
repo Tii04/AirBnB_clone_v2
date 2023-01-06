@@ -12,10 +12,12 @@ from models.amenity import Amenity
 from models.review import Review
 import json
 
+
 def escape_double_quotes(string):
     """A method to escape double quotes both inside and outside
     Of the string."""
     return json.dumps(string[1:-1])[1:-1]
+
 
 def remove_spaces(string):
     """A function to convert spaces in a string to underscore
