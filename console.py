@@ -150,7 +150,7 @@ class HBNBCommand(cmd.Cmd):
                         if parts[1][0] == '\"':
                             parts[1] = escape_double_quotes(
                                 parts[1]
-                            )                
+                            )
                             parts[1] = remove_spaces(parts[1])
                         elif parts[1].find('.') != -1:
                             # it's a float
@@ -166,7 +166,7 @@ class HBNBCommand(cmd.Cmd):
                 print(some_args)
 
 
-            # Create model and save to json file
+# Create model and save to json file
             new_instance = HBNBCommand.classes[args[0]](**some_args)
             storage.save()
             print(new_instance.id)
